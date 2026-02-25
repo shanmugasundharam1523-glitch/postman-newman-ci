@@ -1,0 +1,16 @@
+{
+  "name": "postman-tests",
+  "version": "1.0.0",
+  "description": "Postman collection integrated with Newman for CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run collection.json --iteration-data data.csv",
+    "test:report": "newman run collection.json --iteration-data data.csv -r cli,htmlextra --reporter-htmlextra-export report.html"
+  },
+  "author": "Shanmuga Sundaram",
+  "license": "ISC",
+  "devDependencies": {
+    "newman": "^6.0.0",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
